@@ -1,3 +1,4 @@
+# The purpose of this action is to build the contents of this repository into an SBOL package
 name: packaging
 
 # Controls when the action will run.
@@ -10,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out this repository for building
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       # All of this below here should be packaged up into a single importable action
       - name: Set up Python
