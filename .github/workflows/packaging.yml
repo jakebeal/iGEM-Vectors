@@ -20,7 +20,7 @@ jobs:
           python-version: 3.9
 
       - name: Check out experimental package code for SBOL utilities
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
         with:
           repository: SynBioDex/sbol-utilities
           ref: sep054
