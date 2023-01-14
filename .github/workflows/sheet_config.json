@@ -1,0 +1,17 @@
+{
+    "basic_sheet": "Parts and Devices",
+    "basic_parts_name": "B1",
+    "package_namespace": "B2",
+    "package_imports": "B3",
+    "basic_parts_description": "A6",
+    "basic_first_row": 16,
+
+    "composite_sheet": "Libraries and Composites",
+    "composite_parts_name": null,
+    "composite_parts_description": null,
+    "composite_first_row": 14,
+    "composite_strain_col": null,
+    "composite_context_col": 4,
+    "composite_constraints_col": 5,
+    "composite_first_part_col": 6
+}

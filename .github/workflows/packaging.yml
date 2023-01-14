@@ -31,4 +31,4 @@ jobs:
           pip install sbol-utilities
 
       - name: Test if we can export correctly
-        run: excel-to-sbol Vectors.xlsx
+        run: excel-to-sbol Vectors.xlsx -c .github/workflows/sheet_config.json
