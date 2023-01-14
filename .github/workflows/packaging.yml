@@ -26,9 +26,10 @@ jobs:
           ref: sep054
           path: sbol-utilities
 
+      # Note kludge for local install during experimentation:
       - name: Install SBOL utilities
         run: |
-          pip install sbol-utilities
+          pip install -e sbol-utilities
 
       - name: Test if we can export correctly
         run: excel-to-sbol -c .github/workflows/sheet_config.json Vectors.xlsx
