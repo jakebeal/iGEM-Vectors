@@ -1,0 +1,34 @@
+# The purpose of this action is to build the contents of this repository into an SBOL package
+name: packaging
+
+# Controls when the action will run.
+on:
+  [push, pull_request, workflow_dispatch]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository for building
+      - uses: actions/checkout@v3
+
+      # All of this below here should be packaged up into a single importable action
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Check out experimental package code for SBOL utilities
+      - uses: actions/checkout@v3
+        with:
+          repository: SynBioDex/sbol-utilities
+          ref: sep054
+          path: sbol-utilities
+
+      - name: Install SBOL utilities
+        run: |
+          pip install sbol-utilities
+
+      - name: Test if we can export correctly
+        run: excel-to-sbol Vectors.xlsx
