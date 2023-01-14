@@ -1,4 +1,3 @@
-# The purpose of this action is to build the contents of this repository into an SBOL package
 name: packaging
 
 # Controls when the action will run.
